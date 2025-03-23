@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Fireworks Canvas -->
+    <canvas id="fireworks"></canvas>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>
+            <span>H</span><span>a</span><span>p</span><span>p</span><span>y</span>
+            <span>B</span><span>i</span><span>r</span><span>t</span><span>h</span><span>d</span><span>a</span><span>y</span>,
+            <span>S</span><span>u</span><span>j</span><span>e</span><span>e</span><span>t</span>! 🎉
+        </h1>
+        <p>Here's to another year of amazing memories and unstoppable adventures! 🌟</p>
+        <button class="btn" onclick="showMessage()">Read My Message 💌</button>
+    </section>
+
+    <!-- Hidden Message Section -->
+    <section class="message" id="hiddenMessage">
+        <h2>🎁 A Special Note</h2>
+        <p>Dear Sujeet,</p>
+        <p>
+            Life is a journey, and along the way, we meet people who change it forever. You are not just a friend—you
+            are my brother, my family.
+            From the laughter-filled nights to the struggles we faced together, every moment has been priceless.
+        </p>
+        <p>
+            No matter where life takes us, the bond we share will never fade. Like the song says, "It's been a long day
+            without you, my friend, and I'll tell you all about it when I see you again."
+            We’ve built memories that time can never erase, and no distance can break the connection we have.
+        </p>
+        <p>
+            Always remember, no matter what happens, I’ll always have your back, just like you’ve had mine. You’re not
+            alone in this journey—brothers forever.
+        </p>
+        <p><strong>Always be happy in your life. ⭐</strong></p>
+        <p><strong>Your brother for life,</strong></p>
+        <p><strong>Rituraj</strong></p>
+        <p>Scroll Down⬇️</p>
+    </section>
+
+
+    <!-- Memories Gallery -->
+    <section class="memories">
+        <h2>📸 Our Memories</h2>
+        <div class="gallery">
+            <img src="image1.jpg" alt="Memory 1">
+            <img src="image2.jpg" alt="Memory 2">
+            <img src="image3.jpg" alt="Memory 3">
+            <img src="image4.jpg" alt="Memory 4">
+        </div>
+    </section>
+
+    <!-- Music Player -->
+    <section class="music-player">
+        <h2>🎧 A Song for You</h2>
+        <div class="player-container">
+            <div class="cover">
+                <img src="album-cover.jpg" alt="Song Cover">
+            </div>
+            <h3 id="songTitle">Birthday Vibes 🎂</h3>
+            <audio id="audio" src="Self-Love.mp3"></audio>
+
+            <div class="progress-container">
+                <input type="range" id="progressBar" value="0">
+            </div>
+
+            <div class="time-container">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+
+            <div class="controls">
+                <button id="prevBtn">⏮️</button>
+                <button id="playBtn">▶️</button>
+                <button id="nextBtn">⏭️</button>
+            </div>
+        </div>
+        <div class="equalizer"></div>
+    </section>
+
+    <footer>
+        <p>Made with ❤️ by Rituraj</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

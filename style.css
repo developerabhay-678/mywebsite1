@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Fireworks Canvas */
+canvas#fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0; /* Ensures fireworks stay in the background */
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Base Styling */
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ff8c00, #ff0080, #8a2be2); /* Gold, Pink, Blue */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* Apply Hover Effect to Each Letter */
+h1 span {
+    display: inline-block;
+    transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Moving Glow Effect */
+h1:hover span {
+    animation: movingGlow 2s linear infinite;
+}
+
+/* Keyframes for Moving Glow */
+@keyframes movingGlow {
+    0% { text-shadow: 0 0 10px #ff8c00, 0 0 20px #ff0080; color: #fff; }
+    50% { text-shadow: 0 0 15px #ff0080, 0 0 25px #8a2be2; color: #ff0080; }
+    100% { text-shadow: 0 0 20px #8a2be2, 0 0 30px #ff8c00; color: #8a2be2; }
+}
+
+/* Reset Previous Characters */
+h1 span:not(:hover) {
+    text-shadow: none;
+    color: #fff;
+}
+
+/* Apply Delay to Each Character for a Moving Effect */
+h1 span:nth-child(1) { animation-delay: 0s; }
+h1 span:nth-child(2) { animation-delay: 0.1s; }
+h1 span:nth-child(3) { animation-delay: 0.2s; }
+h1 span:nth-child(4) { animation-delay: 0.3s; }
+h1 span:nth-child(5) { animation-delay: 0.4s; }
+h1 span:nth-child(6) { animation-delay: 0.5s; }
+h1 span:nth-child(7) { animation-delay: 0.6s; }
+h1 span:nth-child(8) { animation-delay: 0.7s; }
+h1 span:nth-child(9) { animation-delay: 0.8s; }
+h1 span:nth-child(10) { animation-delay: 0.9s; }
+h1 span:nth-child(11) { animation-delay: 1s; }
+h1 span:nth-child(12) { animation-delay: 1.1s; }
+h1 span:nth-child(13) { animation-delay: 1.2s; }
+h1 span:nth-child(14) { animation-delay: 1.3s; }
+h1 span:nth-child(15) { animation-delay: 1.4s; }
+h1 span:nth-child(16) { animation-delay: 1.5s; }
+h1 span:nth-child(17) { animation-delay: 1.6s; }
+h1 span:nth-child(18) { animation-delay: 1.7s; }
+h1 span:nth-child(19) { animation-delay: 1.8s; }
+h1 span:nth-child(20) { animation-delay: 1.9s; }
+
+p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+/* Message Section */
+.message {
+    display: none;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+.message h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Memories Gallery */
+.memories {
+    position: relative;
+    z-index: 2;
+}
+
+/* Memories Gallery */
+.memories h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    max-width: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+/* Music Player */
+.music-player {
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: fadeIn 1.5s ease-in;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.music-player h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.player-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.cover img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.time-container {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 10px auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Music Player Controls */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.controls button {
+    font-size: 1rem;  /* Increased size */
+    padding: 12px 18px;  /* More padding for better touch */
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+/* Hover Effect */
+.controls button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);  /* Slight pop-out effect */
+}
+
+
+/* Equalizer Effect */
+.equalizer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.equalizer div {
+    width: 5px;
+    height: 30px;
+    background: #00c6ff;
+    margin: 0 2px;
+    animation: equalize 1.2s infinite alternate ease-in-out;
+}
+
+@keyframes equalize {
+    from { height: 10px; }
+    to { height: 30px; }
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+    opacity: 0.9;
+}
